@@ -105,6 +105,15 @@ const data = {
       link: 'http://github.com/#',
       preview: ''
     }
+  ],
+  contact: [
+    { mail: 'dimasjimenezpoch@gmail.com' },
+    {
+      phone: '+34662416193'
+    },
+    {
+      githubLink: 'https://github.com/dimasjjpp'
+    }
   ]
 }
 
@@ -126,11 +135,12 @@ export const sliderTexts = [
   }
 ]
 export const navTemplate = `
-  <a href=""><h3>Home</h3></a>
-  <a href=""><h3>Who are you?</h3></a>
-  <a href=""><h3>What have you studied?</h3></a>
-  <a href=""><h3>Where have you worked?</h3></a>
-  <a href=""><h3>How do I contact you?</h3></a>
+  <a href="#home-section"><h4>Home</h4></a>
+  <a href="#aboutme"><h4>Who are you?</h4></a>
+  <a href="#education"><h4>What have you studied?</h4></a>
+  <a href="#experience"><h4>Where have you worked?</h4></a>
+  <a href="#projects"><h4>Whats you've done?</h4></a>
+  <a href="#contact"><h4>How do I contact you?</h4></a>
 `
 export const homeTemplate = `
   <div id="home-text-container">
@@ -143,7 +153,7 @@ export const homeTemplate = `
   </div>
 `
 export const aboutMeTemplate = `
-<h3>SOBRE MÍ</h3>
+<h3>ABOUT ME</h3>
 <div id="aboutme-text-container">
   <p>${data.aboutMe}</p>
   <a id="modal-selector">That's me</a>
@@ -156,24 +166,21 @@ export const aboutMeTemplate = `
     </div>
     <div id="modal-text-container"
     <p>Ops... that's my dog Arcadi</p>
-    <a id="secondModal-selector">That's me..for real</a>
-    </div>
-  </div>
-  <div class="displayNone"> 
-    <div id="second-modal" class="modal-container">
-      <span id="close-second-modal">&times;</span>
-      <div id="second-selfimage-link">
-        <img src="./public/assets/selfimg.jpg" alt="Dog image" />
-      </div>
+    <a id="second-modal-selector">That's me..for real</a>
     </div>
   </div>
 </div>
-
-
+<div id="secondModalContainer" class="displayNone">
+  <div class="modal-container">
+    <span id="close-second-modal">&times;</span>
+      <div id="second-selfimage-link">
+        <img src="./public/assets/selfimg.jpg" alt="Dog image" />
+        
+      </div>
+  </div>
+</div>
 `
-
 export const educationSectionTemplate = `
-
   <h3>EDUCATION</h3>
   <div class="educationTextContainer">
     
@@ -215,3 +222,31 @@ data.workExperience.forEach((exp) => {
   provisionalExpWork.push(workexp)
 })
 export const workSectionTemplate = provisionalExpWork.join('')
+
+const projectsTemplate = []
+projectsTemplate.push(`<h3>PROJECTS</h3>`)
+
+data.projects.forEach((project) => {
+  let projectHTML = `
+    <div id="projects-container">
+      <p>${project.title}</p>
+      <p>${project.description}</p>
+      <a href="${project.link}">${project.link}</a>
+    </div>`
+  projectsTemplate.push(projectHTML)
+})
+
+export const projectsHTML = projectsTemplate.join('')
+
+export const contactSectionTemplate = `
+ <h3>CONTACT ME</h3>
+<div class="contact-text-container"
+  <p>Would you like to listen to the story when I flew away from a carrousel? </p>
+  <ul>
+    <li><a href="${data.contact[0].githubLink}"><img src="./public/assets/icons8-github-50.png" class="linkIcon"></img></a></li>
+    <li><a href="tel:${data.contact[1].phone}"><img src="./public/assets/icons8-phone-50.png" class="linkIcon"></img></a></li>
+    <li><a href="mailto:${data.contact[0].mail}"><img src="./public/assets/icons8-mail-50.png" class="linkIcon"></img></a></li>
+  </ul>
+</div>
+
+`
