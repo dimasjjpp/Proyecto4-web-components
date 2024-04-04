@@ -9,9 +9,11 @@
   --font-hover-color: #fcfcfc;
   --medium-font-size: 2em;
   --title-section-font-size: 7em;
-  --text-section-font-size:8em
-  --title-section-font-weight:400;
-  --text-section-font-weight:400;
+  --text-section-font-size: 8em;
+  --text-mobile-font-size: 1.5rem;
+  --title-mobile-font-size: 2em;
+  --title-section-font-weight: 400;
+  --text-section-font-weight: 400;
   color-scheme: light dark;
   background-color: #ffffffee;
   font-synthesis: none;
@@ -33,291 +35,43 @@ body {
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
-.displayNone{
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.displayNone {
   display: none;
 }
-nav {
-  position: fixed;
-  top: 0;
-  display: inline-flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  justify-content: space-evenly;
-  max-height: 50px;
-  z-index: 2;
-}
-nav > a {
-  width: fit-content;
-  text-decoration: none;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-nav > a > h4 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-weight: 200;
-  cursor: pointer;
-  transition-property: var(--background-color);
-  transition-duration: 1s;
-}
-nav > a > h4:hover {
-  background-color: var(--background-hover-color);
-  color: var(--font-hover-color);
-}
-#home-section {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--background-color);
-  overflow-y: hidden;
-}
-#home-text-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  margin-top: 3em;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-}
-#home-text-container > h1 {
-  font-size: 10em;
-  font-weight: 600;
- 
-}
-#home-below-text-container {
-  height: 50%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  
-}
-#home-below-text-container > h3 {
-  font-size: var(--title-section-font-size);
-  justify-content: center;
-  font-weight: 200;
-  height: 15vh;
-}
-#sliderContainer {
-  margin-top: 1.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-style: italic;
-}
-#sliderContainer > h5 {
-  position: relative;
-  justify-content: center;
-  /*   top: 1em; */
-  font-weight: 300;
-  font-size: 1.5em;
-}
-#sliderContainer > h6 {
-  position: relative;
-  margin-top: 1em;
-  font-weight: 300;
-  justify-content: center;
-  font-size: large;
-  font-style: italic;
-  /* top: 2em; */
-}
-/*aboutme Section
- */
-#aboutme {
-  height: 100vh;
-  min-height: 90vh;
-  top: 0em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 2em;
-  padding: 2em;
-}
-#aboutme > h3 {
-  left: 2em;
-  top: 2.5em;
-}
-
-#aboutme-text-container {
-  height: 50%;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 0.5em;
-  gap: 0px;
-  margin: 2em;
-}
-#aboutme-text-container > p {
-  font-size: 2em;
-  font-weight: 200;
-  height: 100%;
-  width: 100%;
-}
-#aboutme-text-container > a {
-   font-size: 2em;
-  font-weight: 200;
-  text-decoration: underline;
-  cursor: pointer;
-}
-#modal,
-#secondModalContainer {
-  position: fixed;
-  top: 20%;
-  left: 30%;
-    width: 40%;
-  height: 40%;
-  z-index: 2; 
-  justify-content: center; 
-  align-items: center;   
-}
-.modal-container{
-  background-color: rgb(5, 5, 5); 
-  position: fixed;
-  object-fit: contain;
-  padding: 2em;
-  text-align: center;
-  position: relative; 
-}
-#selfimage-link,
-#second-selfimage-link{
-  max-width: auto;
-  max-height: auto;
-  background-color: #000000;
-}
-#modal-text-container,
-#second-modal-selector{
-  background-color: #000000;
-  color: #fcfcfc;
-}
-#selfimage-link > img{
-  width: 60%; 
-  height: 50%; 
-  object-fit: contain;
-}
-#second-selfimage-link > img {
-  width: 40%; 
-  height: 40%; 
-  object-fit: contain;
-  background-color: #000000;
-}
-#second-modal-selector{
-  cursor: pointer;
-  text-decoration: underline;
-}
-#close-modal,
-#close-second-modal{
-  position: absolute;
-  color: #fcfcfc;
-  background-color: #000000;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-#education {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-left: 2em;
-  
-}
-
-.educationTextContainer > p,
-#relevant-courses > ul,
-#relevant-courses > p {
-    font-size: 1.5em;
-  font-weight: 300;
-}
-#experience{
-   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-left: 2em;
-}
-#work-exp  {
-  font-size: 1.25em;
-  font-weight: 300;
-}
-#projects{
-   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin-left: 2em;
-}
-#projects > h3{
+h3 {
   display: block;
   text-align: center;
-}
-#projects-container{
-  width: 90%;
-  font-size: 1.25em;
-  font-weight: 300;
-  gap: 2em;
-}
-#projects-container > p{
-  margin-bottom: 15px;
-}
-#projects-container > p:first-child{
-  gap: 20px;
-  font-size: larger;
+  font-size: var(--title-section-font-size);
   font-weight: 400;
 }
-#projects-container > p:last-child{
-  font-size: medium;
+@media screen and (max-width: 780px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  section {
+    display: block;
+    height: fit-content;
+  }
 
-
-}
-h3{
-   display: block;
-  text-align: center;
-  font-size: var(--title-section-font-size);
-    font-weight: 400;
-}
-#contact{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#contact > h3{
-  margin-top: 1em;
-}
-.contact-text-container {
- 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 50vh;
-  width: 70%;
-}
-.contact-text-container > ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 30%;
-  margin: 3em;
-}
-.contact-text-container > ul > li{
-  list-style: none;
-
+  h3 {
+    font-size: var(--title-mobile-font-size);
+  }
+  h5 {
+    font-size: var(--title-mobile-font-size);
+  }
+  p {
+    font-size: var(--text-mobile-font-size);
+  }
 }

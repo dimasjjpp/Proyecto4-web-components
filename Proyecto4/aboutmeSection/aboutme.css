@@ -1,0 +1,118 @@
+#aboutme-text-container {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0.5em;
+  gap: 0px;
+  margin: 2em;
+}
+#aboutme-text-container > p {
+  font-size: 2em;
+  font-weight: 200;
+  height: 100%;
+  width: 100%;
+}
+#aboutme-text-container > a {
+  font-size: 2em;
+  font-weight: 200;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#modal,
+#secondModalContainer {
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container {
+  background-color: rgb(5, 5, 5);
+  position: fixed;
+  object-fit: contain;
+  padding: 2em;
+  text-align: center;
+  position: relative;
+}
+#selfimage-link,
+#second-selfimage-link {
+  max-width: auto;
+  max-height: auto;
+  background-color: #000000;
+}
+#modal-text-container,
+#second-modal-selector {
+  background-color: #000000;
+  color: #fcfcfc;
+}
+#selfimage-link > img {
+  width: 60%;
+  height: 50%;
+  object-fit: contain;
+}
+#second-selfimage-link > img {
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+  background-color: #000000;
+}
+#second-modal-selector {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 780px) {
+  #aboutme-text-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  #aboutme-text-container > p {
+    font-size: var(--text-mobile-font-size);
+  }
+  #modal,
+  #secondModalContainer {
+    position: fixed;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-container {
+    background-color: rgb(5, 5, 5);
+    position: fixed;
+    object-fit: contain;
+    padding: 2em;
+    text-align: center;
+    position: relative;
+  }
+  #selfimage-link > img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+  }
+  #second-selfimage-link > img {
+    width: 100%;
+    height: 40%;
+    object-fit: contain;
+    background-color: #000000;
+  }
+  #close-modal,
+  #close-second-modal {
+    font-size: 2em;
+    position: absolute;
+    color: #fcfcfc;
+    background-color: #000000;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,28 @@
+#projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 2em;
+}
+#projects > h3 {
+  display: block;
+  text-align: center;
+}
+#projects-container {
+  width: 90%;
+  font-size: 1.25em;
+  font-weight: 300;
+  gap: 2em;
+}
+#projects-container > p {
+  margin-bottom: 15px;
+}
+#projects-container > p:first-child {
+  gap: 20px;
+  font-size: larger;
+  font-weight: 400;
+}
+#projects-container > p:last-child {
+  font-size: medium;
+}
