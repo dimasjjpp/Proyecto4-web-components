@@ -7,3 +7,5 @@
 4️⃣ Pintado de datos utilizando variables (no introducir datos a mano directamente a los elementos que creemos)
 
 5️⃣ No crear ningún elemento dentro del body del html que no venga creado ya por defecto en VITE
+
+Requests done!
